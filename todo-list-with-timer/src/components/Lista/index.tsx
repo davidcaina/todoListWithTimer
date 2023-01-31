@@ -1,5 +1,4 @@
-import React from "react";
-import "./styles.scss";
+import Item from "./Item";
 
 function Lista() {
   const tarefas = [
@@ -13,10 +12,7 @@ function Lista() {
       <h2> Tarefas Selecionadas</h2>
       <ul>
         {tarefas.map((tarefa, index) => (
-          <li key={index} className="item">
-            <h3> {tarefa.tarefa}</h3>
-            <span>{tarefa.tempo}</span>
-          </li>
+          <Item key={index} {...tarefa} />
         ))}
       </ul>
     </aside>
